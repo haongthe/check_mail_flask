@@ -26,3 +26,5 @@ def upload():
 def download(filename):
 	return send_file(filename, as_attachment=True, attachment_filename = "TO_CLIENT_" + filename)
 
+if __name__ == "__main__":
+	app.run(port = 8080, debug = True)
