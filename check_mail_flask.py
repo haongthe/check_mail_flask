@@ -4,7 +4,6 @@ import check_email
 
 app = Flask(__name__)
 
-
 @app.route("/upload", methods=['GET', 'POST'])
 def upload():
 	if request.method == 'POST':
@@ -26,4 +25,4 @@ def upload():
 def download(filename):
 	return send_file(filename, as_attachment=True, attachment_filename = "TO_CLIENT_" + filename)
 if __name__ == "__main__":
-	app.run(port = 8080, debug = True)
+	app.run()
