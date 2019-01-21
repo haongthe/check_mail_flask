@@ -4,7 +4,7 @@ import check_email
 
 app = Flask(__name__)
 
-@app.route("/upload", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def upload():
 	if request.method == 'POST':
 		file = request.files['file']
